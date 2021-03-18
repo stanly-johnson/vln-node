@@ -59,6 +59,8 @@ orml-traits = { git = "https://github.com/valibre-org/open-runtime-module-librar
 orml-oracle = { git = "https://github.com/valibre-org/open-runtime-module-library", default-features = false }
 pallet-proxy = { git = "https://github.com/paritytech/substrate", branch = "rococo-v1", default-features = false, version = '3.0.0' }
 pallet-membership = { git = "https://github.com/paritytech/substrate", branch = "rococo-v1", default-features = false, version = '3.0.0' }
+orml-xtokens = { git = "https://github.com/open-web3-stack/open-runtime-module-library", default-features = false, version = "0.4.1-dev" }
+orml-xcm-support = { git = "https://github.com/open-web3-stack/open-runtime-module-library", default-features = false, version = "0.4.1-dev" }
 
 # Local dependencies
 vln-primitives = { default-features = false, path = '../primitives' }
@@ -70,13 +72,13 @@ vln-transfers = { default-features = false, path = '../pallets/transfers' }
 [features]
 default = ['std']
 runtime-benchmarks = [
-    'sp-runtime/runtime-benchmarks',
-    'frame-benchmarking',
-    'frame-support/runtime-benchmarks',
-    'frame-system-benchmarking',
-    'hex-literal',
-    'frame-system/runtime-benchmarks',
-    'pallet-timestamp/runtime-benchmarks',
+	'sp-runtime/runtime-benchmarks',
+	'frame-benchmarking',
+	'frame-support/runtime-benchmarks',
+	'frame-system-benchmarking',
+	'hex-literal',
+	'frame-system/runtime-benchmarks',
+	'pallet-timestamp/runtime-benchmarks',
 ]
 std = [
 	"codec/std",
@@ -109,13 +111,15 @@ std = [
 	"xcm-executor/std",
 	"cumulus-pallet-xcm-handler/std",
 	'orml-tokens/std',
-    'orml-oracle/std',
+	'orml-oracle/std',
 	'pallet-proxy/std',
 	'vln-primitives/std',
-    'vln-foreign-asset/std',
-    'vln-backed-asset/std',
-    'vln-human-swap/std',
-    'vln-transfers/std',
-	'pallet-membership/std'
+	'vln-foreign-asset/std',
+	'vln-backed-asset/std',
+	'vln-human-swap/std',
+	'vln-transfers/std',
+	'pallet-membership/std',
+	'orml-xtokens/std',
+	'orml-xcm-support/std',
 ]
 standalone = []
